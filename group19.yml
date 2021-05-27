@@ -18,7 +18,7 @@ version: '2'
 services:
 
     opendlv-cone-detection:
-        image: registry.git.chalmers.se/courses/tme290/2021/group19/opendlv-cone-detection:v1.5
+        image: registry.git.chalmers.se/courses/tme290/2021/group19/opendlv-cone-detection:v1.6
         restart: on-failure
         network_mode: "host"
         environment:
@@ -26,7 +26,7 @@ services:
         ipc: "host"
         volumes:
          - /tmp:/tmp
-        command: "--cid=140 --name=img.argb --width=1280 --height=720 --freq=50" 
+        command: "--cid=140 --name=img.argb --width=1280 --height=720 --freq=50 --strategy=2" 
 
     opendlv-kiwi-control:
         image: registry.git.chalmers.se/courses/tme290/2021/group19/opendlv-kiwi-control:v1.3
